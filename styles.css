@@ -1,0 +1,33 @@
+.css-picker {
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: stretch;
+  align-items: stretch;
+  min-height: 15em;
+  width: 20%;
+  margin-left: 100px;
+  border: 1px solid rgb(62, 10, 156);
+  border-radius: 4px;
+}
+
+.css-picker a {
+  height: 3em;
+  line-height: 3em;
+  vertical-align: middle;
+  text-decoration: none;
+  background-color: rgb(53, 30, 94);
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+  margin: 10px 10px;
+  text-align: center;
+  box-shadow: -2px 
+}
+
+.css-picker a:hover {
+  background-color: rgb(62, 10, 156);
+}
+
+.css-picker a:active {
+  transform: translate(0, 2px);
+}
