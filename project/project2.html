@@ -7,17 +7,63 @@
   <meta name="keywords" content="course, ACE program, Phillips Academy, computer science, web development" />
   <meta name="robots" content="index,follow" />
 </head>
+<style>
+  li {
+    margin-top: 15px;
+  }
+
+  .outro {
+    margin: 40px auto 0px auto;
+    width: 50%;
+    text-align: center;
+  }
+
+  span:before{
+      content:" ";
+      display:inline-block;
+      width: 15px;
+  }
+</style>
 <body>
   <div id="container">
-    <div class="section">
+    <div class="header">
       <a href="../index.html"><h1>ACE 10 Computer Science</h1></a>
       <h4>Summer 2018</h4>
     </div>
     <div class="section">
-      <h2>Project 2: Write your script</h2>
+      <h2>Project 2: Make an App</h2>
       <p>
-        This site is still being populated!  Check back soon.
+        In this project, you'll be adding to your own personal website by making a single-page app.  What goes into an app?  It needs to be a webpage with user interaction that has a purpose to it.  Perhaps that purpose is fun, or perhaps it has some functionality to solve a "real" problem.  The choice is yours!  But you should have lots of interactive JavaScript, and everything that looks like it should be interactive should be!  Remember, anything can receive event listeners, it doesn't just have to be just <code>&lt;button&gt;</code>'s.  Here are some examples to get you thinking:
       </p>
+      <ul>
+        <li>
+          Here's an <a href="https://nzufelt.github.io/guess-the-color/">Color Guessing App</a> that I wrote, where the user is presented with the <a href="https://en.wikipedia.org/wiki/Web_colors#Hex_triplet">hex code</a> for a certain color, they imagine the color in their mind (how much red, green, and blue), then the click the big box in the middle to reveal the color.
+        </li>
+        <li>
+          You could make some kind of mathematical calculator.  This is perhaps the most straightforward, if boring, idea.
+        </li>
+        <li>
+          Make a madlibs (appropriate for school, of course!)&mdash;have a whole bunch of <code>&lt;input&gt;</code> elements that capture input from the user, then have that fill in some madlibs.  You should have at least two different madlibs "skeletons" (<em>i.e.</em>stories that get filled in), though feel free to add more.
+        </li>
+        <li>
+          You could make an interactive study guide for a subject of your choosing, perhaps by making virtual flashcards that show up <a href="https://www.w3schools.com/js/js_random.asp">randomly</a>  
+        </li>
+        <li>
+          You could make an app wherein the user uploads a picture, and you apply a filter to it.  This might be a bit tough!  You may need to poke around for other libraries that can help take care of some pieces.
+        </li>
+        <li>
+          You could make an app that does <em>live</em> currency conversions, perhaps by pulling data from an API.  That's a bit complicated, but it would be awesome if you could pull it off!  <a href="https://codepen.io/nicholaszufelt/pen/qyZbXo">This CodePen</a> I made should help.
+        </li>
+      </ul>
+      The actual requirements for the project are:
+      <ul>
+        <li>
+          <strong>The App:</strong> Your app should be a new page on your (original, project 1) website, it should be interactive, and it should accomplish a single, nontrivial task.  See above for examples of nontrivial tasks, and feel free to ask me about your ideas!  It should be well-styled and intuitive&mdash;meaning I should know exactly what your website does as soon as I arrive, I should know what I can interact with and what is just static, and it should be easy to accomplish the stated task from the hosted (<em>i.e.</em>on-the-internet) version of your website.
+        </li>
+        <li>
+          <strong>Use the Horizontal:</strong> Make the changes I suggested for your original website (or ask me if there's something you think you shouldn't do), and add one new feature to your website: horizontal placement of content!  Use a flexbox.  You could add <a href="https://limedaring.com/speaking/">columns</a>, make a <a href="http://www.callieschweitzer.com/">nice navigation bar</a>, or arrange your site or just a section of it into a <a href="http://www.sarahlichang.com/photography/">grid</a>... There are <a href="https://codepen.io/dudleystorey/pen/rmWMXY/">so many possibilities</a>!  Come talk to me if you're stuck.
+        </li>
+      </ul>
     </div>
   </div>
 </body>
