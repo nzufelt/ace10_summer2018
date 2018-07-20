@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" >
   <title>ACE 10 Computer Science, Summer 2018</title>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <meta name="description" content="The course website for the ACE 10 Computer Science course"/>
   <meta name="keywords" content="course, ACE program, Phillips Academy, computer science, web development" />
   <meta name="robots" content="index,follow" />
@@ -181,8 +181,8 @@
   </dl>
 </div>
 <div class="css-picker">
-  <a href="javascript:void(0);">No Stylesheet</a>
-  <a href="javascript:void(0);">Dr Z's Stylesheet</a>
+  <a href="#" id="no-style-sheet">No Stylesheet</a>
+  <a href="#" id="drz-style-sheet">Dr Z's Stylesheet</a>
   <a href="javascript:void(0);">(Add your own for it to appear here!)</a>
 </div>
 
@@ -191,5 +191,36 @@
     This project is hosted <a href="https://github.com/nzufelt/ace10_summer2018">on GitHub</a>.
   </p>
 </div>
+<script>
+const styles = {
+  "no-style-sheet": (() => (switchCss())),
+  "drz-style-sheet": (() => (switchCss("css/styles.css")))
+};
+
+for (id in styles) {
+  document.getElementById(id).addEventListener("click", styles[id]);
+}
+
+function switchCss(stylesheetName) {
+  var link = document.querySelector("link");
+
+  var head = document.querySelector("head");
+  if (stylesheetName) {
+    var newLink = document.createElement("link");
+    newLink.setAttribute("rel", "stylesheet");
+    newLink.setAttribute("type", "text/css");
+    newLink.setAttribute("href", stylesheetName);
+    if (link) {
+      console.log(link.parentElement);
+      head.replaceChild(link, newLink);
+    } else {
+      head.appendChild(newLink);
+    }
+  } else if (link){
+    head.removeChild(link);
+  }
+}
+
+</script>
 </body>
 </html>

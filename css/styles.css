@@ -1,7 +1,7 @@
 .css-picker {
   display: flex;
   flex-flow: nowrap column;
-  justify-content: stretch;
+  justify-content: space-around;
   align-items: stretch;
   min-height: 15em;
   width: 20%;
@@ -21,7 +21,7 @@
   transition: background-color 0.2s ease-in-out;
   margin: 10px 10px;
   text-align: center;
-  box-shadow: -2px 
+  box-shadow: -2px
 }
 
 .css-picker a:hover {
