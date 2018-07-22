@@ -3,10 +3,54 @@
 <head>
   <meta charset="utf-8" >
   <title>ACE 10 Computer Science, Summer 2018</title>
+  <link rel="stylesheet" type="text/css" href="../css/styles.css" />
   <meta name="description" content="The course website for the ACE 10 Computer Science course"/>
   <meta name="keywords" content="course, ACE program, Phillips Academy, computer science, web development" />
   <meta name="robots" content="index,follow" />
   <style>
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  * {
+    box-sizing: inherit;
+  }
+
+  #container {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .section {
+    border-radius: 10px;
+    border: 2px solid rgb(63, 29, 139);
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1.6em;
+  }
+
+  .header a {
+
+  }
+
+  a {
+    color: rgb(63, 29, 139);
+    transition: color 0.3s ease-in-out;
+  }
+
+  a:hover {
+    color: rgb(48, 140, 126);
+  }
+
+  .outer-list>li {
+    margin-bottom: 20px;
+  }
+
+  /* Styling for the group assignments */
   #groups {
     margin: 0 auto;
     display: flex;
@@ -20,15 +64,21 @@
 
   .group {
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 10px;
+    overflow: hidden;
     width: 31%;
     height: 45%;
-    background-color: rgb(220, 235, 216);
-    padding: 20px;
+    background-color: rgba(63, 29, 139, 0.1);
+    /* padding: 20px; */
   }
 
   .group h3 {
-    width: 80%;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(63, 29, 139, 0.25);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -40,24 +90,108 @@
     padding-top: 1.2em;
     padding-left: 18%;
   }
+
+  .underline {
+    text-decoration: underline;
+  }
   </style>
 </head>
 <body>
 <div id="container">
   <div class="header">
-
-
   <a href="../index.html"><h1>ACE 10 Computer Science</h1></a>
   <h4>Summer 2018</h4>
 </div>
 <div class="section">
-  <h2>Project 3: Make an app</h2>
+  <h2>Project 3: Work with a client</h2>
   <p>
-    This site is still being populated!  Check back soon.
+    In this project, you'll be writing the code for an app designed by a student in Ms. Gueli's Graphic and Web Design course.  This is a <strong>group project</strong>, and the group will receive a single grade.  The purpose of this project is to create a <em>minimum viable product</em>, meaning something that demonstrates the basic functionality of the app.  Some things we don't have anywhere near the background to do, such as setting up a server, and you clearly won't be required to do that.  You'll work with your designer, and with me, to figure out what within their idea is a minimum viable product.
   </p>
+  <h3>Your app should (at least!):</h3>
+  <ul class="outer-list">
+    <li>
+      <strong>Have a homepage</strong>. This will certainly be given to you by your designer.
+    </li>
+    <li>
+      <strong>Have an example second page</strong>, to which your homepage links.  This will also be given to you by the designer.  This is just a minimum requirement&mdash;it is absolutely possible that a good minimum viable product has a few more than just these two pages, if it's a content-heavy, interaction-light app.
+    </li>
+    <li>
+      <strong>Match its design</strong> as closely as possible. You should strive to make the design look exactly like what they give you!  They should be giving you, at least:
+      <ul>
+        <li>
+          Pictures of what the app's pages should look like, and descriptions of the interactivity,
+        </li>
+        <li>
+          Exactly the colors you should use, probably as <a href="https://www.w3schools.com/colors/colors_hexadecimal.asp">Hex Codes</a>,
+        </li>
+        <li>
+          Exactly the fonts you should use, probably as links to Google Fonts,
+        </li>
+        <li>
+          All of the app's <em>assets</em>, meaning the pictures, icons, and large blocks of text content.
+        </li>
+      </ul>
+       There is no reason to not give the customer what they want (within reason&mdash;talk to me if something seems impossible).
+    </li>
+    <li>
+      <strong>Have some nontrivial interaction</strong>, using JavaScript.  Feel free to discuss with me what I mean by "nontrivial".
+    </li>
+    <li>
+      <strong>Be hosted on GitHub, in its own repository</strong>.  This part is important, as you want to deliver code that your designer could use in a future version of the product!  Hosting the code online is an easy way for them to give it to a future team of developers, if desired.  You should also link to this project in your own Projects section of your website.
+    </li>
+    <li>
+      <strong>Have no surprise omissions</strong>. If there is something in the design that doesn't seem doable for your group, you need to run it by me and reach a consensus.  Both your designer and I should be impressed with your apps, not surprised at its lack of content/functionality/design.
+    </li>
+    <li>
+      <strong>Come from all of you</strong>. Please be sure to help your group!  If there is a problem with unequal amounts of work done by group members, please come talk to me.  You will need to break your team into roles.  Here are how I've broken it down:
+      <ul>
+        <li>
+          The <em>Project Coordinator</em> should make the GitHub repository, be the main person responsible for interfacing with the designer, take code from everyone else, glue it all together and push it up to GitHub, and make sure it's all <a href="https://github.com/nzufelt/ace10_summer2018/blob/master/webdev_code_style.md">consistently formatted</a>.  This is a lot of work, so this person would likely not be writing anywhere near as much code.  However, this person should be helping their group members as much as possible, and should <em>not be distracting them</em> during class time.
+        </li>
+        <li id="developers">
+          The <em>Developers</em> would break the website down into pieces, make a framework of the website together (see below), and then take a particular piece of the website to focus on.  The Developers should not make the Project Coordinator do more work than what is stated above.
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div class="section">
+  <h3>Deadlines</h3>
+  <ol class="outer-list">
+    <li>
+      <strong>Initial App Breakdown: Tuesday, 6/24, 8:30AM</strong>. You should <span class="underline">bring to class</span> a single page sheet with the following information:
+      <ul>
+        <li>
+          <span class="underline">A short description</span>, written in complete sentences, which describes what your group will create.  You need to first agree with me on the functionalities of your minimum viable product.  This description doesn't need to be of any particular length, but it should completely describe the project.
+        </li>
+        <li>
+          <span class="underline">Group roles</span>: Please have each person designated to their role, and have the Developers split the entirety of the app into pieces.  Feel free to do this by color coding or pointing to pieces of the description.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <strong>App Framework: Wednesday, 6/25, 8:30AM</strong>.  Submit, on canvas, a link to the project's repository, which has already been made into a <a href="https://github.com/nzufelt/intro_html_css/blob/master/hosting_on_github_pages.md">GitHub Pages Site</a>, and which already contains the app's framework, meaning:
+      <ul>
+        <li>
+          All eventual pages to the app should have a corresponding <span class="underline">HTML file</span>.  It only needs to contain a header (an <code>&lt;h1&gt;</code>) with its name, as well as any links (<code>&lt;a&gt;</code>) to the other pages that will eventually exist.
+        </li>
+        <li>
+          Any <span class="underline">images</span> given to you by the designer should be already contained in a subfolder called <code>img</code>.  This means you can access them on the website by: <code>&lt;img src="img/image_filename.png"/&gt;</code>, where <code>image_filename.png</code> is the name of the file.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <strong>Rough Product: Friday, 6/27, 8:30AM</strong>.  By this time, each designer should have submitted their code&mdash;in whatever state it's in at that point&mdash;to the Project Coordinator, who will format it and push it all up to GitHub.  You should have a somewhat functional, if quite broken, version of the app at this point.
+    </li>
+    <li>
+      <strong>Final Product: Monday, 6/30, 8:30AM</strong>.
+    </li>
+  </ol>
+</div>
+</div>
   <div id="groups">
     <div class="group">
-       <h3>Andover Guide <span>Yasmine</span></h3>
+       <h3>Andover Attractions <span>Yasmine</span></h3>
       <ul class="devs">
         <li>
           Ioanna Ninos
@@ -71,7 +205,7 @@
       </ul>
     </div>
     <div class="group">
-       <h3>Chinese Tour Site <span>Tony</span></h3>
+       <h3>Historic Buildings <span>Tony</span></h3>
       <ul class="devs">
         <li>
           Summer Seward
@@ -85,7 +219,7 @@
       </ul>
     </div>
     <div class="group">
-       <h3>Fitness App <span>Lynn</span></h3>
+       <h3>Fitness <span>Lynn</span></h3>
       <ul class="devs">
         <li>
           Sabrina Codrington
@@ -99,7 +233,7 @@
       </ul>
     </div>
     <div class="group">
-       <h3>Swatches <span>Ethan</span></h3>
+       <h3>Swatch <span>Ethan</span></h3>
       <ul class="devs">
         <li>
           Naiya Roe
@@ -113,7 +247,7 @@
       </ul>
     </div>
     <div class="group">
-       <h3>World Cup News <span>Ells Boone</span></h3>
+       <h3>24/7 <span>Ells Boone</span></h3>
       <ul class="devs">
         <li>
           Ellerman Mateo
@@ -127,7 +261,7 @@
       </ul>
     </div>
     <div class="group">
-       <h3>Map &amp; Calendar <span>Morris</span></h3>
+       <h3>Andover Trips <span>Morris</span></h3>
       <ul class="devs">
         <li>
           Laura Ospina
@@ -142,10 +276,8 @@
           Bryan Villafana
         </li>
       </ul>
-
     </div>
   </div>
-</div>
 </div>
 </body>
 </html>
